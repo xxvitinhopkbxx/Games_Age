@@ -3,6 +3,7 @@ package br.com.gamesage.entities;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 import java.io.Serializable;
@@ -13,10 +14,12 @@ public class ProgressoId implements Serializable {
 
     @ManyToOne
     @JsonIgnoreProperties({"progressos"})
+    @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
     @ManyToOne
     @JsonIgnoreProperties({"progressos"})
+    @JoinColumn(name = "id_jogo")
     private Jogo jogo;
 
     public ProgressoId(Usuario usuario, Jogo jogo) {

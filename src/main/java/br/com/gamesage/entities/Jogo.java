@@ -2,6 +2,7 @@ package br.com.gamesage.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import org.springframework.stereotype.Component;
@@ -23,7 +24,6 @@ public class Jogo {
     private String nome;
     @Column(name = "descricao")
     private String descricao;
-    @JsonBackReference
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.jogo")
     private Set<Progresso> progressos;
 

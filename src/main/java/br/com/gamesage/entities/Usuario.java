@@ -28,8 +28,7 @@ public class Usuario {
     @Column(name = "email")
     private String email;
 
-    @JsonManagedReference
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.usuario")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.usuario", cascade = CascadeType.ALL)
     private Set<Progresso> progressos;
 
     public Usuario() {
