@@ -32,7 +32,7 @@ public class UsuarioController {
         return service.cadastrarAlterar(usuario, "cadastrar");
     }
 
-    @PostMapping(value = "/alterar")
+    @PutMapping(value = "/alterar")
     public ResponseEntity<?> alterar(@RequestBody Usuario usuario) {
         return service.cadastrarAlterar(usuario, "alterar");
     }
