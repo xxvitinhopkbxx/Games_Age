@@ -25,6 +25,7 @@ public class UsuarioDTO {
         this.nome = usuario.getNome();
         this.sobrenome = usuario.getSobrenome();
         this.apelido = usuario.getApelido();
+        this.email = usuario.getEmail();
         for (Progresso progresso : usuario.getProgressos()) {
             ProgressoDTO progressoDTO = new ProgressoDTO();
             progressoDTO.setProgresso(progresso.getProgresso());

@@ -42,6 +42,9 @@ public class UsuarioService {
         } else if (usuario.getApelido().equals("")) {
             resposta.setMensagem("O nickname do usuário é obrigatório");
             return new ResponseEntity<>(resposta, HttpStatus.BAD_REQUEST);
+        } else if (usuario.getEmail().equals("")) {
+            resposta.setMensagem("O email do usuário é obrigatório");
+            return new ResponseEntity<>(resposta, HttpStatus.BAD_REQUEST);
         } else {
             return new ResponseEntity<>(repo.save(usuario), HttpStatus.CREATED);
         }
@@ -57,6 +60,9 @@ public class UsuarioService {
             return new ResponseEntity<>(resposta, HttpStatus.BAD_REQUEST);
         } else if (usuario.getApelido().equals("")) {
             resposta.setMensagem("O nickname do usuário é obrigatório");
+            return new ResponseEntity<>(resposta, HttpStatus.BAD_REQUEST);
+        } else if (usuario.getEmail().equals("")) {
+            resposta.setMensagem("O email do usuário é obrigatório");
             return new ResponseEntity<>(resposta, HttpStatus.BAD_REQUEST);
         } else {
             if (acao.equals("cadastrar")) {
