@@ -1,6 +1,5 @@
 package br.com.gamesage.dtos;
 
-import br.com.gamesage.entities.Jogo;
 import lombok.Data;
 
 @Data
