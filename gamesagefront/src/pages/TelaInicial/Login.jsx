@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Login.css'
 
 const Login = () => {
   let [authMode, setAuthMode] = useState("signin")
@@ -19,21 +20,23 @@ const Login = () => {
                 Sign Up
               </span>
             </div>
-            <div className="form-group mt-3">
-              <label>Email address</label>
+            <div className="form-floating mt-3">
               <input
                 type="email"
+                id='email'
                 className="form-control mt-1"
-                placeholder="Enter email"
+                placeholder="Email address"
               />
+              <label htmlFor='email'>Email address</label>
             </div>
-            <div className="form-group mt-3">
-              <label>Password</label>
+            <div className="form-floating mt-3">
               <input
                 type="password"
+                id='senha'
                 className="form-control mt-1"
-                placeholder="Enter password"
+                placeholder="Password"
               />
+              <label htmlFor='senha'>Password</label>
             </div>
             <div className="d-grid gap-2 mt-3">
               <button type="submit" className="btn btn-primary">
@@ -60,31 +63,34 @@ const Login = () => {
               Sign In
             </span>
           </div>
-          <div className="form-group mt-3">
-            <label>Full Name</label>
+          <div className="form-floating mb-3">
+            <input
+              type="text"
+              id='nome'
+              className="form-control mt-1"
+              placeholder="Full Name"
+            />
+            <label htmlFor='nome' >Full Name</label>
+          </div>
+          <div className="form-floating mb-3">
             <input
               type="email"
+              id='emailcad'
               className="form-control mt-1"
-              placeholder="e.g Jane Doe"
+              placeholder="Email address"
             />
+            <label htmlFor='emailcad'>Email address</label>
           </div>
-          <div className="form-group mt-3">
-            <label>Email address</label>
-            <input
-              type="email"
-              className="form-control mt-1"
-              placeholder="Email Address"
-            />
-          </div>
-          <div className="form-group mt-3">
-            <label>Password</label>
+          <div className="form-floating mb-3">
             <input
               type="password"
-              className="form-control mt-1"
+              id='senhacad'
+              className="form-control"
               placeholder="Password"
             />
+            <label htmlFor='senhacad'>Password</label>
           </div>
-          <div className="d-grid gap-2 mt-3">
+          <div className="d-grid gap-2 mb-3">
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
